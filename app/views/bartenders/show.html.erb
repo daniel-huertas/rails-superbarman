@@ -1,6 +1,6 @@
 <% languages = [] %>
 <% 1.upto(5) do |i|  %>
-  <% languages << @bartender.read_attribute("language_#{i}") if @bartender.read_attribute("language_#{i}") %>
+<% languages << @bartender.read_attribute("language_#{i}") if @bartender.read_attribute("language_#{i}") %>
 <% end %>
 
 
@@ -31,7 +31,7 @@
       <br>
       <br>
       <%= link_to new_user_session_path do %>
-        <div class="btn button-home"> BOOK ME! </div>
+      <div class="btn button-home"> BOOK ME! </div>
       <% end %>
     </div>
 
@@ -49,11 +49,43 @@
       <br><br><br>
       <div class= "content">
         <% 1.upto(3) do |i|  %>
-          <%= image_tag @bartender.read_attribute("speciality_#{i}"), class: 'avatar-largest' %>
+        <%= image_tag @bartender.read_attribute("speciality_#{i}"), class: 'avatar-largest' %>
         <% end %>
       </div>
     </div>
   </div>
+
+
+  <div class="row">
+    <div class="reviews text-center">
+      <h3>Reviews:</h3>
+      <% @bartender.reviews.each do |review| %>
+      <ul>
+        <li>
+          <strong>
+            <% review.rating.times do  %>
+            <i class='fa fa-glass' aria-hidden='true'></i>
+            <% end %>
+            <% 5 - review.rating.times do  %>
+            <i class='fa fa-glass' aria-hidden='true'></i>
+            <% end %>
+          </strong>
+          <%= review.content %>
+        </li>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+
+
 </div>
-</div>
+ </div>
+
+
+
+
+
+
+
+
 

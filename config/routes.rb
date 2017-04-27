@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
   get '/bartenders/search', to: 'bartenders#search'
-  resources :bartenders, only: [:index, :show]
+  resources :bartenders, only: [:index, :show] do
+    resources :reviews, only: [:new, :create, :update]
+  end
 end
