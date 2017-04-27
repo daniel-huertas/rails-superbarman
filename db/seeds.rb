@@ -14,6 +14,9 @@ TITLE_ADJ = %w(Sexy Cool Amazing Laidback Partyguru)
 RANDOM_COCKTAIL_URL = "http://www.thecocktaildb.com/api/json/v1/1/random.php"
 
 Bartender.destroy_all
+Party.destroy_all
+User.destroy_all
+
 12.times do
 
   args = {}
@@ -43,6 +46,23 @@ Bartender.destroy_all
 
 end
 
+Bartender.all.each do |bartender|
+  rand(1..3).times do
+    party             = Party.new(theme: 'Party')
+    bartender.parties << party
+    n                 = Faker::GameOfThrones.character
+    user              = User.new(first_name: n, email: Faker::Internet.safe_email(n), password: 'youknownothing', password_confirmation: 'youknownothing')
+    user.parties      << party
+    user.save!
+  end
+
+  bartender.parties.each do |party|
+    party.address = bartender.location
+    party.date = Date.new(2017, rand(1..12), rand(1..28)).to_s
+    party.size = 30
+    party.save!
+  end
+end
 p "Everything OK!"
 
 

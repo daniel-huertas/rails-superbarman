@@ -1,13 +1,12 @@
 a{
   text-decoration: none;
-  font-family: 'Titillium Web', sans-serif;
-  color: #616668;
+  font-family: $base-font;
   &:hover{
     text-decoration:none;
-    color: #A99267;
+    color: $gold;
   }
 }
 
 body{
-  font-family: 'Titillium Web', sans-serif;
+  font-family: $base-font;
 }

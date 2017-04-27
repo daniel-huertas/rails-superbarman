@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :parties, dependent: :destroy
+  has_many :bartenders, through: :parties
   devise :omniauthable, omniauth_providers: [:facebook]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

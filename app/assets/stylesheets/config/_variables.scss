@@ -4,7 +4,7 @@
 // Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Timmana" rel="stylesheet");
-$base-font: "Open Sans", "Helvetica", "sans-serif";
+$base-font: "Titillium Web", "sans-serif";
 $header-font: "Raleway", "Helvetica", "sans-serif";
 
 // Local fonts (uncomment following lines)
@@ -32,13 +32,20 @@ $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
-$grey: #808080;
+
+
+// facebook login
 $facebook-blue: #3B5998;
 
+// color scheme
+$grey: #272424;
+$brown: #282424;
+$black: #1B1B1B;
+$white: #ECECEC;
+$gold: #A99267;
+$light-grey: #E1E1E1;
 $grey-btn-hover: #171717;
-
-$light-grey: #D0D7B5;
 $very-light-grey: #EBEBEB;
 $lightest-grey: #F5F5F5;
 $grey-btn-hover: #171717;
-
+$dropdown-grey:  #999999;

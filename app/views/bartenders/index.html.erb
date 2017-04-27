@@ -1,29 +1,7 @@
-
 <div class="container">
   <div class="row">
-    <form action="/bartenders/search" class="form-inline" id="form-index">
-      <input type="text" placeholder="Location" name="location_query" class="form-control input">
+    <%= render 'search_form_index' %>
 
-      <select name="type-of-party" id="type-of-party" class="form-control">
-        <option value="1">Party</option>
-        <option value="2">Birthday</option>
-        <option value="3">Hen/Stag do</option>
-        <option value="4">Leaving do</option>
-        <option value="5">House Warming</option>
-        <option value="6">Wedding</option>
-      </select>
-
-      <select name="number-of-guests" id="number-of-guests" class="form-control">
-        <option value="1">5-29</option>
-        <option value="2">30-59</option>
-        <option value="3">60-90</option>
-      </select>
-
-
-      <button type="submit" class="form-control btn-search">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
   </div>
 
   <div class="row">

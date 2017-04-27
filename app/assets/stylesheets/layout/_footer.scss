@@ -1,5 +1,5 @@
 .footer-basic-centered{
-  background-color: #272424;
+  background-color: $brown;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
@@ -36,7 +36,7 @@
   box-sizing: border-box;
   padding-left: 4.16667vw;
   letter-spacing: .22917vw;
-  color: #ad9064;
+  color: $gold;
 }
 
 .footer-payment {
@@ -48,7 +48,7 @@
 
 .footer-basic-centered .footer-links{
   list-style: none;
-  color:  #ffffff;
+  color:  $white;
   padding: 14px 0 23px;
   margin: 0;
   width: 69vw;
@@ -65,7 +65,7 @@
 }
 
 .footer-links a:hover{
-  color: #A99267;
+  color: $gold;
   transition: color .3s ease-out;
 }
 
@@ -89,11 +89,11 @@
     box-sizing: border-box;
     letter-spacing: .22917vw;
     padding-left: 2vw;
-    color: #A99267;
+    color: $gold;
 }
 
 .contact {
-  color: white;
+  color: $white;
   font-size: 20px;
   padding: 0 10px 0 10px;
 }
@@ -103,7 +103,7 @@
 }
 
 .contact:hover{
-  color: #A99267;
+  color: $gold;
   transition: color .3s ease-out;
 }
 .copyright-notice {

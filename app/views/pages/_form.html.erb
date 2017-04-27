@@ -1,23 +1,15 @@
-<form action="<%= bartenders_path %>" class= "home-form">
-  <select name="type-of-party" id="type-of-party">
-    <option value="" disabled selected>Type of event</option>
-    <option value="1">Party</option>
-    <option value="2">Birthday</option>
-    <option value="3">Hen/Stag do</option>
-    <option value="4">Leaving do</option>
-    <option value="5">House Warming</option>
-    <option value="6">Wedding</option>
-  </select>
-  <br>
+<%= simple_form_for @party, url: "/bartenders", method: :get, html: { id: 'home-form' } do |f| %>
+  <div class="">
+    <%= f.select :theme, collection: Party::TYPES, input_html: { class: "input form-input-index" } %>
+  </div>
 
-  <select name="number-of-guests" id="number-of-guests" placeholder="Number of guests">
-    <option value="" disabled selected>Number of guests</option>
-    <option value="1">5-29</option>
-    <option value="2">30-59</option>
-    <option value="3">60-89</option>
-  </select>
-  <br><br>
-  <input type="submit" value="Get your party started" class="button-home">
-</form>
+  <div class="">
+    <%= f.select :size, collection: ['5-29', '30-59', '60-90'], input_html: { class: "input form-input-index" } %>
+  </div>
 
-
+  <div class="">
+    <%= button_tag type: :submit, class: "btn-search" do %>
+      <i class="fa fa-search"></i>
+    <% end %>
+  </div>
+<% end %>

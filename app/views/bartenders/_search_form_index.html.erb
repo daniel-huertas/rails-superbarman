@@ -1,0 +1,36 @@
+<%= simple_form_for @party, url: "/bartenders/search" do |f| %>
+  <%= f.input :address, label: false, placeholder: 'Location', wrapper_html: { class: '' }, input_html: { class: "input form-input-index" } %>
+
+  <div class="">
+    <%= f.input :theme, collection: Party::TYPES, input_html: { class: "input form-input-index" } %>
+    <%= f.select :theme, collection: Party::TYPES, input_html: { class: "input form-input-index" } %>
+  </div>
+
+  <div class="">
+    <%= f.input :size, collection: ['5-29', '30-59', '60-90'], input_html: { class: "input form-input-index" } %>
+  </div>
+
+  <div class="">
+    <%= f.input :date, as: :datepicker, label: false %>
+  </div>
+
+  <div class="">
+    <%= button_tag type: :submit, class: "btn-search", id: 'btn-search-index' do %>
+      <i class="fa fa-search"></i>
+    <% end %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  function initialize() {
+
+  var input = document.getElementById('party_address');
+  var autocomplete = new google.maps.places.Autocomplete(input);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+

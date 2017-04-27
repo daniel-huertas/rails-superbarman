@@ -1,3 +1,32 @@
-#form-index {
-  margin-top: 15px;
+#new_party {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  padding: 0 15px;
+  margin: 50px 0 200px 0;
+  .form-input-index {
+
+  }
+
+  #party_size {
+    height: 50px !important;
+    background-color: #8d9093;
+  }
+  #party_theme {
+    height: 50px !important;
+    background-color: #8d9093;
+  }
+
+  #btn-search-index {
+    height: 50px !important;
+    width: 50px;
+    background-color: #8d9093;
+  }
+
+  #party_date {
+    height: 50px !important;
+
+    display: block;
+    width: 200px;
+  }
 }
